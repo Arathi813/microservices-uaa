@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://uaa:8090/uaa/userinfo
+      prefer-token-info: false
+
+ribbon:
+  eureka:
+    enabled: true
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    ROOT: INFO
